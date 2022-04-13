@@ -1,0 +1,13 @@
+﻿
+@model IEnumerable<CategoryDTO>
+
+<li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ürün Kategorileri <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        @foreach (CategoryDTO item in Model)
+        {
+            <li><a class="dropdown-item" href="~/product/getproducts/@item.ID">@item.CategoryName</a></li>
+        }
+        
+    </ul>
+</li>
